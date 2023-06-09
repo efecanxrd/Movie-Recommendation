@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Film Tavsiye Sonuçları</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Serif:opsz,wght@8..144,100;8..144,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <br><br><br>
+        <center><h1 style="font-family: Montserrat;">Tavsiye Edilen Filmler</h1></center>
+        <br>
+        <div class="row">
+            {% for movie in movies %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ movie }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

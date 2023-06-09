@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Film Tavsiye Sistemi</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Serif:opsz,wght@8..144,100;8..144,500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<form action="{{ url_for('recommend') }}" method="POST">
+	<div class="container">
+        <br>
+        <br>
+        <br>
+		<center><h1 style="font-family: Montserrat;">Film Tavsiye Sistemi</h1></center>
+			<div class="form-group">
+				<label for="category">En sevdiğiniz film kategorisi nedir?</label>
+				<input type="text" class="form-control" name="category" id="category" required>
+			</div>
+			<div class="form-group">
+				<label for="mood">Şu anda hissetmek istediğiniz ruh hali nedir?</label>
+				<input type="text" class="form-control" name="mood" id="mood" required>
+			</div>
+			<div class="form-group">
+				<label for="time_period">Hangi tarihler aralığında olan filmleri önermemizi istersiniz?</label>
+				<select class="form-control" name="time_period" id="time_period" required>
+					<option value="80ler">80 - 90</option>
+					<option value="90lar">90 - 2000</option>
+					<option value="2000ler">2000 - 2010</option>
+					<option value="2010lar">2010 - 2023</option>
+				</select>
+			</div>
+            <center>
+			<button type="submit" class="btn btn-primary" style="background-color: rgb(33, 0, 63);">Önerileri Göster</button>
+            </center>
+		</form>
+	</div>
+</body>
+</html>
