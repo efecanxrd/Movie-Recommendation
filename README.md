@@ -7,4 +7,4 @@
 <h4><img align="center" src="https://raw.githubusercontent.com/efecanxrd/efecanxrd/main/images/xe.gif" width="30"> Install Libraries with pip </h4>
 <h2> How this is working? </h2>
   <h4>We created a simply algorithm with pandas in order to find movies. Used flask for webpage</h4>
-<img src="https://im4.ezgif.com/tmp/ezgif-4-40d11ecc68.gif">
+<img src="https://i.hizliresim.com/1uubhvw.gif">
