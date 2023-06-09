@@ -3,23 +3,18 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Ana sayfa
 @app.route('/')
 def home():
     return render_template('home.html')
 
-# Tavsiye sayfası
 @app.route('/recommend', methods=['POST'])
 def recommend():
-    # Form verilerini al
     category = request.form['category']
     mood = request.form['mood']
     time_period = request.form['time_period']
 
-    # Filmleri yükle
     movies_df = pd.read_csv('tmdb_5000_movies.csv')
 
-    # Seçili filmleri seç
     if time_period == '80ler':
         year_start = 1980
         year_end = 1989
@@ -43,7 +38,6 @@ def recommend():
 
     recommended_movies = selected_movies.sort_values('popularity', ascending=False)[:12]
 
-    # Önerilen filmleri şablonla birleştir
     return render_template('recommend.html', movies=recommended_movies['title'])
 
 
